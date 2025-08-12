@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            background: #efefef;
+            color: #212121;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #212121;
+            overflow: hidden;
+        }
+
+        .video-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .video-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: rotate(180deg);
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 100%);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff0000;
+            text-decoration: underline;
+        }
+
+        .hero-title {
+            font-size: 8vw;
+            font-weight: 900;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.5;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                gap: 30px;
+                font-size: 0.8rem;
+            }
+            
+            .hero-title {
+                font-size: 12vw;
+            }
+            
+            .hero-description {
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .nav-links {
+                gap: 20px;
+                font-size: 0.75rem;
+            }
+            
+            .hero-title {
+                font-size: 14vw;
+            }
+            
+            .hero-description {
+                font-size: 0.85rem;
+                padding: 0 5px;
+            }
+            
+            .social-icons {
+                gap: 10px;
+            }
+            
+            .social-icons a {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="video-wrap">
+            <video autoplay playsinline loop muted>
+                <source src="https://tactusmarketing.com/wp-content/uploads/tactus-waves-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content">
+            <div class="nav-links">
+                <a href="/about.html">About</a>
+                <a href="/project.html">Projects</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <h1 class="hero-title">Rishabh Pandey</h1><br>
+            <p class="hero-description">Turning ideas into code and code into innovation. Passionate about crafting intelligent solutions at the intersection of web, AI, and problem-solving.</p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/rishabh-raj-pandey-32a03520b/" target="_blank"><img src="assets/logos/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/FlyingCrab31" target="_blank"><img src="assets/logos/github.png" alt="GitHub"></a>
+    
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

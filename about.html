@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Rishabh Raj Pandey</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            background: #efefef;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            overflow-y: auto;
+        }
+
+        .about-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #212121;
+            overflow: hidden;
+            padding: 50px 20px;
+            flex-direction: column;
+        }
+
+        .video-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .video-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: rotate(180deg);
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 100%);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+            width: 90%;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 20px;
+        }
+
+        .about-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: white;
+            background: rgba(255, 255, 255, 0.176);
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.4s ease, transform 0.2s ease, color 0.4s ease;
+        }
+
+        .resume-btn:hover {
+            background: rgb(255, 0, 0);
+            color: #fff;
+        }
+
+        .logo-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            z-index: 3;
+        }
+
+        .logo-back:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-back img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .about-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-text {
+                font-size: 0.9rem;
+            }
+            
+            .profile-img {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .about-section {
+                padding: 30px 15px;
+            }
+            
+            .about-title {
+                font-size: 2rem;
+            }
+            
+            .about-text {
+                font-size: 0.85rem;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .resume-btn {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+            
+            .logo-back {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="logo-back">
+        <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Back to Home">
+    </a>
+
+    <section class="about-section">
+        <div class="video-wrap">
+            <video autoplay playsinline loop muted>
+                <source src="https://tactusmarketing.com/wp-content/uploads/tactus-waves-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content">
+            <img src="assets/media/profile.jpg" alt="Rishabh Raj Pandey" class="profile-img">
+            <h1 class="about-title">About Me</h1>
+            <p class="about-text">
+               I'm Rishabh, a passionate Computer Science Engineering student at GLA University, Mathura, graduating in 2026. I have a deep curiosity for software development, artificial intelligence, and high-performance computing. My journey revolves around building scalable and efficient solutions that solve real-world problems.
+<br><br>
+With a strong foundation in programming, I specialize in languages like Java, C++, C, Python, and JavaScript. My expertise extends across system programming, multithreading, parallel computing, and compression algorithms. I am well-versed in web development, working with technologies such as React.js, Node.js, HTML, and CSS, while also handling databases like MySQL and MongoDB. My passion for artificial intelligence and deep learning has led me to explore generative AI and natural language processing, enhancing my ability to develop intelligent applications.
+<br><br>
+My academic background includes a solid understanding of data structures and algorithms, operating systems, computer networks, database management systems, cloud computing, and cybersecurity. I actively work with tools like Git/GitHub, Linux, Anaconda, and Visual Studio, constantly striving to refine my skills and expand my technical expertise.
+<br><br>
+Beyond academics, I enjoy experimenting with new technologies, optimizing system performance, and working on cutting-edge AI models. My goal is to develop impactful solutions that push the boundaries of AI, automation, and high-performance computing. Let's connect and create something innovative together!</p>
+            <a href="assets/media/ResumeFinal.pdf" class="resume-btn" target="_blank">My Resume</a>
+        </div>
+    </section>
+
+</body>
+</html>

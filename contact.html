@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rishabh</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            background: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        }
+
+        .contact-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 50px 20px;
+        }
+
+        .video-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .video-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: rotate(180deg);
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .email-text {
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 20px;
+            word-break: break-word;
+        }
+
+        .contact-form {
+            background: rgba(105, 83, 83, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, background 0.3s ease;
+            width: 100%;
+        }
+
+        .contact-form:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: #0000006a;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        .contact-form input:focus, 
+        .contact-form textarea:focus {
+            border: 2px solid #ff0000;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #ffffff;
+            color: #000000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #ff0404;
+            color: black;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+        /* Back to Home Logo Button */
+        .logo-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            z-index: 3;
+        }
+
+        .logo-back:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-back img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .contact-title {
+                font-size: 2rem;
+            }
+            
+            .email-text {
+                font-size: 1rem;
+            }
+            
+            .contact-form {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .contact-section {
+                padding: 30px 15px;
+            }
+            
+            .contact-title {
+                font-size: 1.8rem;
+            }
+            
+            .email-text {
+                font-size: 0.9rem;
+            }
+            
+            .contact-form input, 
+            .contact-form textarea {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+            
+            .contact-form button {
+                font-size: 1rem;
+            }
+            
+            .social-icons a {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .logo-back {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="logo-back">
+        <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Back to Home">
+    </a>
+    <section class="contact-section">
+        <div class="video-wrap">
+            <video autoplay playsinline loop muted>
+                <source src="https://tactusmarketing.com/wp-content/uploads/tactus-waves-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="content">
+            <h1 class="contact-title">Contact Me</h1>
+            <p class="email-text">Email: <a style="color: #ff0000;"> rispandey510@gmail.com</a></p>
+            <form class="contact-form" action="https://formsubmit.co/rispandey510@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/rishabh-raj-pandey-32a03520b/" target="_blank"><img src="assets/logos/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/FlyingCrab31" target="_blank"><img src="assets/logos/github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
